@@ -121,6 +121,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TeleBot";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.TeleBot_Load);
             this.ResumeLayout(false);
 
         }

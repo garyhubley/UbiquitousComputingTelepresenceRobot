@@ -15,8 +15,6 @@ namespace TeleBotGUI
             InitializeComponent();
             // create client instance 
             client = new MqttClient("iot.eclipse.org");
-           
-
         }
 
         private void LeftButton_Click(object sender, EventArgs e)
@@ -48,7 +46,7 @@ namespace TeleBotGUI
             if (client.IsConnected)
                 client.Publish("csci/telerobot/group2", Encoding.UTF8.GetBytes("rotate_clockwise"));
             else
-                MessageBox.Show("Please connect the controller first");
+                MessageBox.Show(@"Please connect the controller first");
         }
 
         private void QuestionButton_Click(object sender, EventArgs e)
@@ -56,7 +54,7 @@ namespace TeleBotGUI
             if (client.IsConnected)
                 client.Publish("csci/telerobot/group2", Encoding.UTF8.GetBytes("question_ask_led"));
             else
-                MessageBox.Show("Please connect the controller first");
+                MessageBox.Show(@"Please connect the controller first");
         }
 
         private void ConnectButton_Click(object sender, EventArgs e)
@@ -77,11 +75,14 @@ namespace TeleBotGUI
 
         }
 
+
+
         static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
 
             String a = System.Text.Encoding.UTF8.GetString(e.Message);
             //myUI(System.Text.Encoding.UTF8.GetString(e.Message), MessageTextBox);
         }
+
     }
 }
