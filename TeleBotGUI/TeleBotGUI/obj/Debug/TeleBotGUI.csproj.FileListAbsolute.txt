@@ -1,9 +1,0 @@
-D:\Documents\Projects\telepresence-robot\TeleBotGUI\TeleBotGUI\bin\Debug\TeleBotGUI.exe.config
-D:\Documents\Projects\telepresence-robot\TeleBotGUI\TeleBotGUI\bin\Debug\TeleBotGUI.exe
-D:\Documents\Projects\telepresence-robot\TeleBotGUI\TeleBotGUI\bin\Debug\TeleBotGUI.pdb
-D:\Documents\Projects\telepresence-robot\TeleBotGUI\TeleBotGUI\obj\Debug\TeleBotGUI.csprojResolveAssemblyReference.cache
-D:\Documents\Projects\telepresence-robot\TeleBotGUI\TeleBotGUI\obj\Debug\TeleBotGUI.TeleBot.resources
-D:\Documents\Projects\telepresence-robot\TeleBotGUI\TeleBotGUI\obj\Debug\TeleBotGUI.Properties.Resources.resources
-D:\Documents\Projects\telepresence-robot\TeleBotGUI\TeleBotGUI\obj\Debug\TeleBotGUI.csproj.GenerateResource.Cache
-D:\Documents\Projects\telepresence-robot\TeleBotGUI\TeleBotGUI\obj\Debug\TeleBotGUI.exe
-D:\Documents\Projects\telepresence-robot\TeleBotGUI\TeleBotGUI\obj\Debug\TeleBotGUI.pdb

@@ -2,4 +2,8 @@
 
 *.exe
 *.dll
-**/dependencies/
+*.lib
+*.pdb
+**/dependencies/*
+**/bin/*
+**/obj/*
