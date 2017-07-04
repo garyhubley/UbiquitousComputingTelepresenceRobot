@@ -9,7 +9,11 @@ namespace TeleBotGUI
     public partial class TeleBot : Form
     {
         MqttClient client;
+       
+        public void On_Client_Connected()
+        {
 
+        }
         public TeleBot()
         {
             InitializeComponent();
@@ -65,24 +69,35 @@ namespace TeleBotGUI
 
             string clientId = Guid.NewGuid().ToString();
             client.Connect(clientId);
-
+            
+            if (client.IsConnected)
+                ConnectButton.BackColor = System.Drawing.Color.Green;
 
             var S1 = new string[] { "csci/telerobot/group2" };
             // subscribe to the topic "/home/temperature" with QoS 2 
-            client.Subscribe(S1, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+            //client.Subscribe(S1, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
 
             //client.Publish("csci/telerobot/group2", Encoding.UTF8.GetBytes("hi its done"));
 
         }
 
-
-
-        static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+        private void TeleBot_Load(object sender, EventArgs e)
         {
 
-            String a = System.Text.Encoding.UTF8.GetString(e.Message);
-            //myUI(System.Text.Encoding.UTF8.GetString(e.Message), MessageTextBox);
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            client.Disconnect();
+        }
+
+        //static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+        //{
+
+        //    String a = System.Text.Encoding.UTF8.GetString(e.Message);
+        //    //myUI(System.Text.Encoding.UTF8.GetString(e.Message), MessageTextBox);
+        //}
 
     }
 }

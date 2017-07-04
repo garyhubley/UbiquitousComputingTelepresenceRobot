@@ -39,11 +39,13 @@
             // 
             // LeftButton
             // 
+            this.LeftButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.LeftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LeftButton.Location = new System.Drawing.Point(65, 109);
+            this.LeftButton.Location = new System.Drawing.Point(0, 0);
+            this.LeftButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.LeftButton.Name = "LeftButton";
-            this.LeftButton.Size = new System.Drawing.Size(40, 40);
+            this.LeftButton.Size = new System.Drawing.Size(80, 502);
             this.LeftButton.TabIndex = 0;
             this.LeftButton.Text = "←";
             this.LeftButton.UseVisualStyleBackColor = true;
@@ -51,11 +53,13 @@
             // 
             // UpButton
             // 
+            this.UpButton.AutoSize = true;
             this.UpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.UpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpButton.Location = new System.Drawing.Point(111, 63);
+            this.UpButton.Location = new System.Drawing.Point(80, 0);
+            this.UpButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.UpButton.Name = "UpButton";
-            this.UpButton.Size = new System.Drawing.Size(40, 40);
+            this.UpButton.Size = new System.Drawing.Size(408, 80);
             this.UpButton.TabIndex = 1;
             this.UpButton.Text = "↑";
             this.UpButton.UseVisualStyleBackColor = true;
@@ -63,11 +67,13 @@
             // 
             // RightButton
             // 
+            this.RightButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.RightButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.RightButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RightButton.Location = new System.Drawing.Point(157, 109);
+            this.RightButton.Location = new System.Drawing.Point(488, 0);
+            this.RightButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.RightButton.Name = "RightButton";
-            this.RightButton.Size = new System.Drawing.Size(40, 40);
+            this.RightButton.Size = new System.Drawing.Size(80, 502);
             this.RightButton.TabIndex = 2;
             this.RightButton.Text = "→";
             this.RightButton.UseVisualStyleBackColor = true;
@@ -75,11 +81,13 @@
             // 
             // DownButton
             // 
+            this.DownButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DownButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.DownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DownButton.Location = new System.Drawing.Point(111, 155);
+            this.DownButton.Location = new System.Drawing.Point(80, 422);
+            this.DownButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.DownButton.Name = "DownButton";
-            this.DownButton.Size = new System.Drawing.Size(40, 40);
+            this.DownButton.Size = new System.Drawing.Size(408, 80);
             this.DownButton.TabIndex = 3;
             this.DownButton.Text = "↓";
             this.DownButton.UseVisualStyleBackColor = true;
@@ -89,40 +97,50 @@
             // 
             this.QuestionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.QuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QuestionButton.Location = new System.Drawing.Point(111, 109);
+            this.QuestionButton.Location = new System.Drawing.Point(202, 279);
+            this.QuestionButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.QuestionButton.Name = "QuestionButton";
-            this.QuestionButton.Size = new System.Drawing.Size(40, 40);
+            this.QuestionButton.Size = new System.Drawing.Size(166, 83);
             this.QuestionButton.TabIndex = 4;
-            this.QuestionButton.Text = "?";
+            this.QuestionButton.Text = "Ask Question";
             this.QuestionButton.UseVisualStyleBackColor = true;
             this.QuestionButton.Click += new System.EventHandler(this.QuestionButton_Click);
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Location = new System.Drawing.Point(12, 12);
+            this.ConnectButton.BackColor = System.Drawing.Color.Red;
+            this.ConnectButton.Location = new System.Drawing.Point(202, 138);
+            this.ConnectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(83, 43);
+            this.ConnectButton.Size = new System.Drawing.Size(166, 83);
             this.ConnectButton.TabIndex = 5;
             this.ConnectButton.Text = "Connect to \r\ncontroller";
-            this.ConnectButton.UseVisualStyleBackColor = true;
+            this.ConnectButton.UseVisualStyleBackColor = false;
             this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
             // 
             // TeleBot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(568, 502);
             this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.QuestionButton);
             this.Controls.Add(this.DownButton);
             this.Controls.Add(this.RightButton);
             this.Controls.Add(this.UpButton);
             this.Controls.Add(this.LeftButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            //this.FormClosing += Window_Closed;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "TeleBot";
-            this.Text = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "Student TeleBot";
             this.Load += new System.EventHandler(this.TeleBot_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
