@@ -3,3 +3,5 @@
 *.exe
 *.dll
 */dependencies/*
+**/bin/
+**/obj/
